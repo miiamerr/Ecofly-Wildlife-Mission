@@ -1,5 +1,4 @@
-*** ECOFYLY *** 
-Wildlife Mission
+*** ECOFYLY Wildlife Mission *** 
 
 ## Team Members:
 
