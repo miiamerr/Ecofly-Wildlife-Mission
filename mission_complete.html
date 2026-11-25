@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission Completed</title>
+    <link rel="stylesheet" href="mission_completed_style.css"/>
+</head>
+<body>
+    <div id="missionCompleted">
+        <div class="result-container">
+            
+            <h1>MISSION COMPLETED</h1>
+            
+            <p class="message">
+                Excellent job! 
+                You saved the wildlife 
+                and completed your mission.
+            </p>
+
+            <h2>MISSION RESULTS: </h2>
+
+            <div class="stats">
+                <div class="stat">
+                    <strong>Score:</strong>
+                    <span class="score" id="scoreValue"></span>
+                </div>
+
+                <div class="fuel">
+                    <strong>Fuel:</strong>
+                    <span class="fuel" id="fuelValue"></span>
+                </div>
+
+                <div class="rescued">
+                    <strong>Rescued:</strong>
+                    <span class="rescued" id="rescuedValue"></span>
+                </div>
+            </div>
+
+            <div class="button">
+                <button class="new-game" onclick="newGame()">
+                    NEW GAME
+                </button>
+
+                <button class="main-menu" onclick="mainMenu()">
+                    MAIN MENU
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
