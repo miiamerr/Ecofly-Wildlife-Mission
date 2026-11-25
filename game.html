@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>EcoFly - Wildlife Mission - Game</title>
+        <link rel="stylesheet" href="game.css" />
+        <script src="game.js" defer></script>
+    </head>
+    <body>
+        <main class="game">
+            <header class="top-bar">
+                <a href="home.html" id="exit-btn" class="menu-btn">Menu</a>
+
+                <div class="fuel-box">
+                    <label for="fuel-bar">Fuel: <span id="fuel-text">100%</span></label>
+                    <meter id="fuel-bar" min="0" max="100" value="100">100%</meter>
+                </div>
+            </header>
+            <section class="quiz" aria-label="Question">
+                <div class="quiz-top">
+                    <img id="animal-img" src="animal.jpg" alt="Endangered animal">
+                    <div>
+                        <h1 id="question">Select a destination on the map.</h1>
+                    </div>
+                </div>
+                
+                <div class="options">
+                    <button type="button" class="option" data-choice="A">A</button>
+                    <button type="button" class="option" data-choice="B">B</button>
+                    <button type="button" class="option" data-choice="C">C</button>
+                    <button type="button" class="option" data-choice="D">D</button>
+                </div>
+
+                <p id="feedback" aria-live="polite"></p>
+            </section>
+            <section class="map-section" aria-label="Map">
+                <div class="legend">
+                    <span><i class="dot green"></i>Easy</span>
+                    <span><i class="dot orange"></i>Medium</span>
+                    <span><i class="dot red"></i>Hard</span>
+                </div>
+
+                <div id="map">
+                    <span id="plane" aria-hidden="true">✈️</span>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
+          
