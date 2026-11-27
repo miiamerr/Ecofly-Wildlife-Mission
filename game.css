@@ -76,14 +76,15 @@ meter {
 
 .quiz-top {
     display: flex;
-    gap: 16px;
+    flex-direction: column;
+    gap: 12px;
     align-items: center;
     margin-bottom: 16px;
 }
 
 #animal-img {
-    width: 130px;
-    height: 95px;
+    width: 280px;
+    height: 190px;
     object-fit: cover;
     border: 2px solid #F2A900;
     border-radius: 10px;
@@ -163,19 +164,76 @@ meter {
 
 #map {
     position: relative;
-    min-height: 220px;
-    background-color: #F9E6A8;
+    width: 100%;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border: 2px solid #F2A900;
     border-radius: 12px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.map-frame {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    line-height: 0;
+}
+
+.pin {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    color: #FFFFFF;
+    background-color: #CC6F00;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease;
+    z-index: 2;
+}
+
+.pin:hover {
+    transform: translate(-50%, -50%) scale(1.15);
+    background-color: #4D2A00;
+}
+
+.pin.green {
+    background-color: #2E8B57;
+}
+
+.pin.orange {
+    background-color: #E67E22;
+}
+
+.pin.red {
+    background-color: #C93B2B;
 }
 
 #plane {
     position: absolute;
     top: 20px;
     left: 20px;
-    font-size: 28px;
+    font-size: 26px;
     line-height: 1;
     transform: translate(-50%, -50%);
+    transition: 2s;
+    pointer-events: none;
+    z-index: 3;
 }
 
 @media (max-width: 600px) {
@@ -193,12 +251,19 @@ meter {
 
     .quiz-top {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
     }
 
     #animal-img {
         width: 100%;
         height: 160px;
+    }
+
+    .map-img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
     }
 
     .options {
