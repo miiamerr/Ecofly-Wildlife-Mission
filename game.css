@@ -266,6 +266,17 @@ meter {
         height: auto;
     }
 
+    .pin {
+        width: 17px;
+        height: 17px;
+        font-size: 7px;
+        border-width: 1.5px;    
+    }
+
+    #plane {
+        font-size: 18px;
+    }
+
     .options {
         grid-template-columns: 1fr;
     }
